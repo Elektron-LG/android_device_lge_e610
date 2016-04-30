@@ -22,9 +22,6 @@ $(call inherit-product, device/lge/e610/full_e610.mk)
 TARGET_SCREEN_HEIGHT := 480
 TARGET_SCREEN_WIDTH := 320
 
-# Copy Prebuilt GoogleKeyboard as system app
-PRODUCT_COPY_FILES +=  device/lge/e610/prebuilt/app/com.google.android.inputmethod.latin_4.1.23163.2622203.apk:system/app/GoogleKeyboard/GoogleKeyboard.apk
-
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := cm_e610
 PRODUCT_RELEASE_NAME := L5
