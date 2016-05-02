@@ -36,13 +36,12 @@
 #include "util.h"
 
 void vendor_load_properties() {
-    //char gversionbb[92];
-    //char dversionbb[92];
+    char gversionbb[92];
+    char dversionbb[92];
     char o_gversionbb[92];
     char o_dversionbb[92];
-    //FILE *fp;
+    FILE *fp;
 
-    /*
     fp = popen("/system/xbin/printf $(/system/xbin/strings /dev/block/mmcblk0p12 | /system/bin/grep -e '-V10' -e '-V20')", "r");
     fgets(gversionbb, sizeof(gversionbb), fp);
     pclose(fp);
@@ -53,13 +52,12 @@ void vendor_load_properties() {
     pclose(fp);
     property_set("ro.product.device", dversionbb);
     property_set("ro.product.model", dversionbb);
-    */
 
-    //if (strlen(gversionbb) == 0) {
+    if (strlen(gversionbb) == 0) {
         property_set("gsm.version.baseband", "V20");
         property_set("ro.product.device", "m4");
         property_set("ro.product.model", "m4");
-    //};
+    };
 
     property_get("gsm.version.baseband", o_gversionbb);
     property_get("ro.product.device", o_dversionbb);
