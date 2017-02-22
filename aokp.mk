@@ -13,8 +13,8 @@
 # limitations under the License.
 # Boot animation
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common AOKP stuff.
+$(call inherit-product, vendor/aokp/configs/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/lge/e610/full_e610.mk)
@@ -23,7 +23,7 @@ TARGET_SCREEN_HEIGHT := 480
 TARGET_SCREEN_WIDTH := 320
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := cm_e610
+PRODUCT_NAME := aokp_e610
 PRODUCT_RELEASE_NAME := L5
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
